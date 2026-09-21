@@ -88,6 +88,7 @@ This section will be updated once the frontend is underway.
 ## Demo Backend
 
 *Main.py example :*
+
 ![Main.py example screenshot](images/backend_print_example.png)
 
 As you can see in the image, cpu_usage_percent returned 0.0% because it was the first time it ran. This is because of `psutil.cpu_percent(interval=None)`. `psutil.cpu_percent()` requires a previous measurement to calculate CPU utilization. It was a personnal choice for my program to keep it non-blocking, lightweight and fast. `psutil.cpu_percent(interval=1)` makes the program block for 1 second on each call while it measures CPU usage.
